@@ -8,6 +8,7 @@ function RandomNumberApp() {
   const [filteredNumbers, setFilteredNumbers] = useState([]);
   const [excludedNumbers, setExcludedNumbers] = useState([]);
   const [error, setError] = useState('');
+  const inputBorderColor = error ? 'red' : 'initial';
 
 const handleSubmit = () => {
     if (requiredNumber !== '') {
@@ -55,10 +56,13 @@ const handleSubmit = () => {
                 type="number"
                 value={requiredNumber}
                 onChange={(e) => setRequiredNumber(e.target.value)}
+                style={{borderColor: inputBorderColor}}
             />
             <button onClick={handleSubmit}>Submit</button>
-            {error && <div style={{color: 'red', fontSize: '15px', marginTop: '8px'}}>{error}</div>}
-        </div>
+            </div>
+            <div>
+             {error && <div style={{color: 'red', fontSize: '15px', margin: '8px 15px'}}>{error}</div>}
+            </div>
         <div className="input-container">
             <label className="input-label" htmlFor="randomCountInput">จำนวนตัวเลขที่ต้องการสุ่ม (1-9):</label>
             <input
