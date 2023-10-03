@@ -7,11 +7,15 @@ function RandomNumberApp() {
   const [filterNumber, setFilterNumber] = useState('');
   const [filteredNumbers, setFilteredNumbers] = useState([]);
   const [excludedNumbers, setExcludedNumbers] = useState([]);
+  const [error, setError] = useState('');
 
-  const handleSubmit = () => {
+const handleSubmit = () => {
     if (requiredNumber !== '') {
       setNumbers([...numbers, parseInt(requiredNumber)]);
       setRequiredNumber('');
+      setError('');
+    } else {
+      setError('กรุณากรอกจำนวน');
     }
   };
 
@@ -44,7 +48,7 @@ function RandomNumberApp() {
   return (
     <div>
         <div className="input-container">
-            <label className="input-label" htmlFor="requiredNumberInput">Require number:</label>
+            <label className="input-label" htmlFor="requiredNumberInput">Require number:<span style={{color: 'red'}}>*</span></label>
             <input
                 id="requiredNumberInput"
                 className="input-field"
@@ -53,6 +57,7 @@ function RandomNumberApp() {
                 onChange={(e) => setRequiredNumber(e.target.value)}
             />
             <button onClick={handleSubmit}>Submit</button>
+            {error && <div style={{color: 'red', fontSize: '15px', marginTop: '8px'}}>{error}</div>}
         </div>
         <div className="input-container">
             <label className="input-label" htmlFor="randomCountInput">จำนวนตัวเลขที่ต้องการสุ่ม (1-9):</label>
