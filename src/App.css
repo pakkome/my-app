@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #dae6ff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(50, 99, 168);
 }
 
 .App-link {
@@ -34,5 +34,265 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+body {
+  font-family: 'Itim', cursive;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #4d9af0;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #76d1ff;
+}
+
+
+/*-----DataTable-------*/
+.datatable {
+  text-align: left;
+}
+p {
+  text-align: left;
+  font-size: 22px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #94d3ff;
+  padding: 8px;
+  text-align: left;
+  font-size: 20px;
+}
+
+th {
+  background-color: #66b0f9;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #a6c3e8;
+  color: #052371;
+}
+
+h2 {
+  color: #125289;
+  margin-top: 10px;
+}
+
+div.Loading {
+  font-size: 18px;
+  color: #aed9ff;
+}
+
+/*End Datatable*/
+
+
+.number-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.number-list span {
+  width: calc(10% - 10px);
+  text-align: center;
+}
+
+
+input[type="number"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 10px;
+  width: 150px;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #0a3869;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+  font-family: 'Itim', cursive;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button[onclick^="setFilter"] {
+  background-color: #6c757d;
+}
+
+button[onclick^="setFilter"]:hover {
+  background-color: #4e555b;
+}
+
+.number-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.number-list span {
+  margin: 5px;
+  font-size: 20px;
+}
+
+
+/* RandomNumberApp.css */
+h4 {
+  font-size: 20px;
+  color: #4a505f;
+}
+.text-box {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.input-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-box {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+}
+
+.input-button {
+  margin-top: 15px;
+  padding: 10px 10px;
+  background-color: #b1c1df;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Itim', cursive;
+}
+
+/*----- ChristmasTreesApp ------- */
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+}
+
+.input-label {
+  flex: 1;
+  font-size: 1.25rem;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.input-field {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #57b9ff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: rgba(167, 221, 255, 0.392);
+  width: 250px;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+li button:nth-child(2) {
+  background-color: #c31f50;
+}
+
+li button:nth-child(3) {
+  background-color: #36a8f4;
+}
+
+li button:nth-child(2):hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #4b819a;
+}
+
+li button:nth-child(3):hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #4b819a;
+}
+.cancleedit {
+  background-color: #8a8a8a;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+      background-color: #bdbdbd;
   }
 }
